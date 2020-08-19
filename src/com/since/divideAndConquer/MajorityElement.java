@@ -1,6 +1,5 @@
 package com.since.divideAndConquer;
 
-import netscape.security.UserTarget;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,6 +58,11 @@ public class MajorityElement {
     }
 
     public int method(int[] nums) {
+
+        if (nums.length %2 == 0) {
+            return quickSearch(nums, 0, nums.length - 1, nums.length / 2 - 1);
+        }
+
         return quickSearch(nums, 0, nums.length - 1, nums.length / 2);
     }
 
